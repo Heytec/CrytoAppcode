@@ -13,8 +13,7 @@ app = dash.Dash(__name__)
 #app.config.suppress_callback_exceptions = True
 
 
-
-
+apikey = '60F4A03A-174B-4FC1-973D-D05364E6AEEB'
 
 
 
@@ -205,13 +204,11 @@ html.Div([
 
 
                ])
-def update_graph(currency,time_change):
+def update_graph(currency, time_change, apikey=apikey):
 
     url = f'https://rest.coinapi.io/v1/ohlcv/{currency}/USD/latest?period_id={time_change}'
 
-    apikey = '60F4A03A-174B-4FC1-973D-D05364E6AEEB'
-    # apikey = 60F4A03A-174B-4FC1-973D-D05364E6AEEB
-    # apikey = '6B081E29-633F-4CDD-9743-9219FBE0709B'
+
     headers = {'X-CoinAPI-Key': apikey}
     response = requests.get(url, headers=headers)
     data = json.loads(response.text)
@@ -230,13 +227,11 @@ def update_graph(currency,time_change):
 
 
                ])
-def update_graph(currency,time_change):
+def update_graph(currency,time_change,apikey=apikey):
 
     url = f'https://rest.coinapi.io/v1/ohlcv/{currency}/USD/latest?period_id={time_change}'
 
-    apikey = '60F4A03A-174B-4FC1-973D-D05364E6AEEB'
-    # apikey = 60F4A03A-174B-4FC1-973D-D05364E6AEEB
-    # apikey = '6B081E29-633F-4CDD-9743-9219FBE0709B'
+
     headers = {'X-CoinAPI-Key': apikey}
     response = requests.get(url, headers=headers)
     data = json.loads(response.text)
@@ -255,13 +250,11 @@ def update_graph(currency,time_change):
                Input('coin', 'value'),
                Input('time', 'value'),
                ])
-def update_graph(currency,time_change):
+def update_graph(currency,time_change,apikey=apikey):
 
     url = f'https://rest.coinapi.io/v1/ohlcv/{currency}/USD/latest?period_id={time_change}'
 
-    apikey = '60F4A03A-174B-4FC1-973D-D05364E6AEEB'
-    # apikey = 60F4A03A-174B-4FC1-973D-D05364E6AEEB
-    # apikey = '6B081E29-633F-4CDD-9743-9219FBE0709B'
+
     headers = {'X-CoinAPI-Key': apikey}
     response = requests.get(url, headers=headers)
     data = json.loads(response.text)
@@ -278,13 +271,11 @@ def update_graph(currency,time_change):
                Input('coin', 'value'),
                Input('time', 'value'),
                ])
-def update_graph(currency,time_change):
+def update_graph(currency,time_change,apikey=apikey):
 
     url = f'https://rest.coinapi.io/v1/ohlcv/{currency}/USD/latest?period_id={time_change}'
 
-    apikey = '60F4A03A-174B-4FC1-973D-D05364E6AEEB'
-    # apikey = 60F4A03A-174B-4FC1-973D-D05364E6AEEB
-    # apikey = '6B081E29-633F-4CDD-9743-9219FBE0709B'
+
     headers = {'X-CoinAPI-Key': apikey}
     response = requests.get(url, headers=headers)
     data = json.loads(response.text)
@@ -303,12 +294,10 @@ def update_graph(currency,time_change):
 
      ]
 )
-def update_figure(currency,time_change):
+def update_figure(currency,time_change,apikey=apikey):
 
     url = f'https://rest.coinapi.io/v1/ohlcv/{currency}/USD/latest?period_id={time_change}'
-    #apikey = '6B081E29-633F-4CDD-9743-9219FBE0709B'
-    apikey='60F4A03A-174B-4FC1-973D-D05364E6AEEB'
-    #60F4A03A-174B-4FC1-973D-D05364E6AEEB
+
     headers = {'X-CoinAPI-Key': apikey}
     response = requests.get(url, headers=headers)
     data = json.loads(response.text)
